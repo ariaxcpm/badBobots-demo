@@ -57,7 +57,7 @@ A grand narrative is being developed featuring betrayal, legacy, and lost identi
 
 ## 👤 Developer
 
-Made with passion by **آریا**
+Made with passion by **ARIA**
 
 ---
 
