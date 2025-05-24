@@ -38,10 +38,12 @@ Further development will include:
 
 ---
 
-## 📜 The World (Coming Soon...)
+## 🌌 Story and World
 
 In a future where humans created emotionally-aware machines, wars are no longer fought by people — only by **Bad Robots**.  
 A grand narrative is being developed featuring betrayal, legacy, and lost identity.
+
+📖 [Read full story in English](./docs/stage_one_story_en.md)
 
 ---
 
