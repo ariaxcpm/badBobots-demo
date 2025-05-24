@@ -1,0 +1,125 @@
+%!Adobe-FontList 1.23
+%Locale:0x429
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:BebasNeue-Regular
+FamilyName:Bebas Neue
+StyleName:Regular
+FullName:Bebas Neue Regular
+MenuName:Bebas Neue
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\zst2024\Desktop\BadRobot\Font\BebasNeue-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:61400
+FileModTime:1656894700
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Bebas Neue Regular
+NameArray:0,Win,1,Bebas Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Centaur
+FamilyName:Centaur
+StyleName:Regular
+FullName:Centaur
+MenuName:Centaur
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\zst2024\Desktop\BadRobot\Font\CENTAUR.TTF
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:82760
+FileModTime:1709473271
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Centaur
+NameArray:0,Win,1,Centaur
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Panzer-Condensed
+FamilyName:Panzer
+StyleName:Condensed
+FullName:Panzer Condensed
+MenuName:Panzer
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\zst2024\Desktop\BadRobot\Font\Panzer-Condensed.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:41732
+FileModTime:1637671728
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Panzer Condensed
+NameArray:0,Mac,4,Panzer Condensed
+NameArray:0,Win,1,Panzer
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Panzer-Regular
+FamilyName:Panzer
+StyleName:Regular
+FullName:Panzer Regular
+MenuName:Panzer
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\zst2024\Desktop\BadRobot\Font\Panzer.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:26056
+FileModTime:1637671728
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Panzer Regular
+NameArray:0,Mac,4,Panzer Regular
+NameArray:0,Win,1,Panzer
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialMT
+FamilyName:Arial
+StyleName:Regular
+FullName:Arial
+MenuName:Arial
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\zst2024\Desktop\BadRobot\Font\arial.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:1036584
+FileModTime:1575709706
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Arial
+NameArray:0,Win,1,Arial
+%EndFont
+

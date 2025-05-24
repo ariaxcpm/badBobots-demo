@@ -1,0 +1,7 @@
+Copyright (c) 2025 ARIA
+
+This is a demo version of the game Bad Robots.
+
+The executable file (`badrobots_demo.exe`) and its assets (textures, fonts, sounds) are NOT open-source and may not be modified, redistributed, or reverse-engineered.
+
+All rights reserved.
