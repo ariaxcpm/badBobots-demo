@@ -1,5 +1,24 @@
 import { useEffect, useRef, useState, useMemo } from "react";
-import placeholder from "./assets/placeholder.svg";
+import backgroundImgSrc from "./assets/background.png"; // پس‌زمینه پشت‌صحنه
+
+// تعریف اطلاعات کارت‌ها + انیمیشن حمله
+import swordsmanWalk1 from "./assets/swordsman_walk1.png";
+import swordsmanWalk2 from "./assets/swordsman_walk2.png";
+import swordsmanAttack1 from "./assets/swordsman_attack1.png"; // جدید
+import swordsmanAttack2 from "./assets/swordsman_attack2.png"; // جدید
+
+import archerWalk1 from "./assets/archer_walk1.png";
+import archerWalk2 from "./assets/archer_walk2.png";
+import archerAttack1 from "./assets/archer_attack1.png"; // جدید
+import archerAttack2 from "./assets/archer_attack2.png"; // جدید
+
+import tankWalk1 from "./assets/tank_walk1.png";
+import tankWalk2 from "./assets/tank_walk2.png";
+import tankAttack1 from "./assets/tank_attack1.png"; // جدید
+import tankAttack2 from "./assets/tank_attack2.png"; // جدید
+
+import playerBaseImgSrc from "./assets/player_base.png";
+import enemyBaseImgSrc from "./assets/enemy_base.png";
 
 const CARD_DEFS = {
   swordsman: {
@@ -23,8 +42,8 @@ const CARD_DEFS = {
     description: "Basic melee infantry.",
     flying: false,
     animations: {
-      walk: [placeholder, placeholder],
-      attack: [placeholder, placeholder]
+      walk: [swordsmanWalk1, swordsmanWalk2],
+      attack: [swordsmanAttack1, swordsmanAttack2]
     },
   },
   archer: {
@@ -48,8 +67,8 @@ const CARD_DEFS = {
     description: "Ranged attacker with arrows.",
     flying: false,
     animations: {
-      walk: [placeholder, placeholder],
-      attack: [placeholder, placeholder]
+      walk: [archerWalk1, archerWalk2],
+      attack: [archerAttack1, archerAttack2]
     },
   },
   tank: {
@@ -73,8 +92,8 @@ const CARD_DEFS = {
     description: "Heavy armored unit, effective at close combat.",
     flying: false,
     animations: {
-      walk: [placeholder, placeholder],
-      attack: [placeholder, placeholder]
+      walk: [tankWalk1, tankWalk2],
+      attack: [tankAttack1, tankAttack2]
     },
   },
 };
@@ -118,10 +137,10 @@ export default function Battle() {
   // ابعاد واقعی تصویر bridge.png
   const BRIDGE_IMG_WIDTH = 3840;
   const BRIDGE_IMG_HEIGHT = 1591;
-
+  
   // بخشی از تصویر که مسیر واقعی هست (توی تصویر اصلی)
   const DESIRED_BRIDGE_HEIGHT = 200; // ارتفاعی که می‌خوای روی صفحه داشته باشه
-
+  
   // موقعیت و ارتفاع مسیر روی canvas
   const BRIDGE_Y_OFFSET = 200;   // جایی که می‌خوای مسیر شروع بشه
   const BRIDGE_MIN_Y = BRIDGE_Y_OFFSET + 20;
@@ -139,9 +158,9 @@ export default function Battle() {
       const playerBaseImg = new Image();
       const enemyBaseImg = new Image();
 
-      bgImg.src = placeholder;
-      playerBaseImg.src = placeholder;
-      enemyBaseImg.src = placeholder;
+      bgImg.src = backgroundImgSrc;
+      playerBaseImg.src = playerBaseImgSrc;
+      enemyBaseImg.src = enemyBaseImgSrc;
 
       await Promise.all([
         new Promise(r => bgImg.onload = r),
@@ -281,7 +300,7 @@ const spawnUnit = (type, side = "player") => {
               unit.currentAnim = "attack";
               unit.frameIndex = 0;
               unit.frameTimer = 0;
-
+            
               if (unit.id === "archer") {
                 const projectileSpeed = 300;
                 projectilesRef.current.push({
@@ -313,7 +332,7 @@ const spawnUnit = (type, side = "player") => {
             }
             return { ...unit };
           }
-
+        
           // --- حرکت ---
           const speed = unit.speed;
           const vx = (dx / distance) * speed;
@@ -387,7 +406,7 @@ const spawnUnit = (type, side = "player") => {
 
 
       // --- بخش ۲: رندر کردن (Draw) ---
-
+      
       // رندر پس‌زمینه
       const bgImg = imageCacheRef.current.background;
       if (bgImg) {
@@ -396,7 +415,7 @@ const spawnUnit = (type, side = "player") => {
         ctx.fillStyle = "#1a202c";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       }
-
+    
       // ... (کدهای رندر پایگاه‌ها شما)
       const playerBaseImg = imageCacheRef.current.playerBase;
       const playerBaseWidth = 250;
@@ -424,13 +443,13 @@ const spawnUnit = (type, side = "player") => {
           unit.frameTimer = 0;
           unit.frameIndex = (unit.frameIndex + 1) % unit.animations[unit.currentAnim].length;
         }
-
+      
         const animCache = imageCacheRef.current[unit.id]?.[unit.currentAnim];
         let img = animCache ? animCache[unit.frameIndex] : null;
         if (!img) { const imgSrc = unit.animations[unit.currentAnim][unit.frameIndex]; img = new Image(); img.src = imgSrc; }
-
+      
         const barWidth = 40; const barHeight = 5; const hpRatio = unit.hp / CARD_DEFS[unit.id].hp;
-
+      
         if (unit.flying) {
           // ... (کدهای رندر واحد پرنده شما)
         } else {
